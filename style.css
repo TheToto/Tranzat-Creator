@@ -1,0 +1,139 @@
+[class*="col-"]{
+  text-align: center;
+}
+
+body {
+  overflow: hidden;
+}
+
+
+.thumb_cont {
+  width: 100px;
+  height: 100px;
+}
+
+.thumb {
+  width: 100px;
+  height: auto;
+  transition: all 0.4s;
+}
+
+.thumb:not(#selected):hover  {
+  width: 80px;
+  margin: 10px 10px 10px 10px;
+}
+
+.scrollblock {
+  overflow: scroll;
+  white-space: nowrap;
+}
+
+#selec {
+  border: 1px solid black;
+  border-bottom: 0px;
+  border-top: 0px;
+  transition: 0.3s;
+}
+
+#tranzat_creator {
+  height: 95vw;
+  width: 95vw;
+  max-height: 400px;
+  max-width : 400px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+@media (max-height: 585px) {  
+  #tranzat_creator {
+    height: calc(90 vh - 185px);
+    width: calc(90vh - 185px);
+  }
+}
+
+
+.part {
+  width: 65px;
+  margin: 10px 10px 10px 10px;
+  transition: all 0.4s; 
+}
+
+.part:not(#pselected):hover {
+  width: 65px;
+  margin: 15px 10px 5px 10px;
+  transition: all 0.4s;
+}
+
+
+#can_parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row_creator {
+  height: calc(100vh - 185px);
+}
+
+.row_sel, #pselected {
+  background: white !important;
+}
+
+.row_sel {
+  height: 100px;
+}
+
+#pselected {
+  border-radius: 50%;
+}
+
+.row, #selected, #parts  {
+  background: #EEEEEE;
+}
+
+.icon {
+  height: 100px;
+  transition: 0.3s;
+}
+.icon:hover {
+  height: 90px;
+  margin: 5px 5px 5px 5px;
+}
+
+.action {
+  position: absolute;
+}
+
+.action img {
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s;
+}
+.action img:hover {
+  widows: 60px;
+  height: 60px;
+}
+.reset {
+  top: 5vh;
+  left: 5vw;
+}
+.download {
+  top: 5vh;
+  right: 5vw;
+}
+
+@media (min-width: 768px) {  
+  .scrollblock {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .action img {
+    width: 75px;
+    height: 75px;
+  }
+  .action img:hover {
+    widows: 85px;
+    height: 85px;
+  }
+}

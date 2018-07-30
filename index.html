@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Tranzat Creator</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+  </head>
+
+  <body>
+<!--
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a id="download" class="dropdown-item" href="#">TELECHARGER</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  -->
+    <div class="row row_creator">
+
+        <div class="col-md-12" id="can_parent">
+            <canvas id="tranzat_creator" width="400" height="400">
+                Ton navigateur est beaucoup trop vieux. Tu peux toujours essayer l'ancienne version de Tranzat Creator.
+            </canvas>
+        </div>
+        <div class="action reset"><a href="#" id="reset"><img src="icons/undo.svg" /></a></div>
+        <div class="action download"><a href="#" id="download"><img src="icons/download.svg" /></a></div> 
+      </div>
+      <div class="row row_sel"> 
+        <div class="d-none d-md-block col-md-1"></div>
+        <div class="d-none d-md-block col-md-1 scrolld"><img class="icon" src="icons/arrow_left.svg" /></div>
+        <div class="col-md-8">
+          <div id="selec" class="scrollblock">
+          </div>
+        </div>
+        <div class="d-none d-md-block col-md-1 scrollu"><img class="icon" src="icons/arrow_right.svg" /></div>
+      </div>
+      <div class="row"> 
+          <div class="d-none d-md-block col-md-1"></div>
+          <div class="d-none d-md-block col-md-1 scrolldd"><img class="icon" src="icons/arrow_left.svg" /></div>
+          <div class="col-md-8">
+            <div id="parts" class="scrollblock">
+                <img class="part" src="res/icons/wings.svg" name="wings" id="pselected" />
+                <img class="part" src="res/icons/mouth.svg" name="mouth" id="" />
+                <img class="part" src="res/icons/eyes.svg" name="eyes" id="" />
+                <img class="part" src="res/icons/tail.svg" name="tail" id="" />
+                <img class="part" src="res/icons/hair.svg" name="hair" id="" />
+                <img class="part" src="res/icons/nose.svg" name="nose" id="" />
+                <img class="part" src="res/icons/object.svg" name="object" id="" />
+                <img class="part" src="res/icons/perso.svg" name="perso" id="" />
+                <img class="part" src="res/icons/back.svg" name="back" id="" />
+            </div>
+          </div>
+          <div class="d-none d-md-block col-md-1 scrolluu"><img class="icon" src="icons/arrow_right.svg" /></div>
+        </div>
+        <!-- Bootstrap core JavaScript
+      </div>
+      ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="creator.js"></script>
+  </body>
+</html>
