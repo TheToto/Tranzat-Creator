@@ -166,7 +166,6 @@ function appear(obj,startTime) {
 }
 
 $( document ).ready(function() {
-    init();
 
     $(".scrolld").click(function(event){
         $('#selec').animate({scrollLeft: '-=300px'}, 200);
@@ -195,5 +194,8 @@ $( document ).ready(function() {
             $('#selec').css('padding-top','0px');
           }, 200);
     });
+    setTimeout(function(){
+        init()
+    }, 500);
 
 });
