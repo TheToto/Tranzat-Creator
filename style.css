@@ -36,8 +36,9 @@ body {
 }
 
 #tranzat_creator {
-  height: 95vw;
-  width: 95vw;
+
+  height: calc(90 vh - 185px);
+  width: calc(90vh - 185px);
   max-height: 400px;
   max-width : 400px;
   border-style: solid;
@@ -45,10 +46,10 @@ body {
   border-radius: 5px;
 }
 
-@media (max-height: 585px) {  
+@media (min-height: 585px) {  
   #tranzat_creator {
-    height: calc(90 vh - 185px);
-    width: calc(90vh - 185px);
+    height: 95vw;
+    width: 95vw;
   }
 }
 
