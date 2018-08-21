@@ -10,7 +10,7 @@ tail = ["celestia","luna","twi","rd","sep","demon","Nyan","Pika","wolftail"];
 back = ["back1","back2","back3","back4","back5","back6","back7"];
 eyes = ["yeux","blase","bourre","colere","demon","excite","fille","kawaii","lunettes","Nyan","oh","Pika","pleure","yeux2"];
 mouth = ["content","D","aah","ah","blase_new","jefaislagueule","miam","mrh","oh_new","pas_contente","sep","blase","bouche","bourre","catmouth","colere","demon","kawaii","levres","oh","Pika","slurp"];
-hair2 = ["celestia_back","luna_back","none","none","sep","none","none","none","none","diplome_back","magicien_back","none","Pika_back","police_back","none","none"];
+hair2 = ["celestia_back","luna_back","none","none","none","none","none","none","none","diplome_back","magicien_back","none","Pika_back","police_back","none","none"];
 hair = ["celestia","luna","twi","rd","sep","Ange","catears","cheuveux","Criniere","diplome","magicien","miku","Pika","police","rasta","wolfears"];;
 object = ["excite","japon","kawaii","maillot","Pika","rasta","ski"];
 nose = ["catnose","wolfnose"];
@@ -67,7 +67,40 @@ function draw() {
     $.each(dparts, function(key,value) {
         can.drawImage(value, dwidth[key]/2, dwidth[key]/2, canvas.width - dwidth[key], canvas.height - dwidth[key]);
     });
-  }
+}
+
+function random() {
+    let randomparts = [undefined,"tail","wings",undefined,undefined,"mouth",undefined,"eyes",undefined,"hair",undefined,undefined];
+    $.each(randomparts, function(key,value) {
+        if (value) {
+            var part_var = eval(value);
+            var part = value;
+            var img = eval("_"+part);
+            var elem = part_var[Math.floor(Math.random() * part_var.length)];
+            console.log(value + " : " + elem);
+            var index = dparts.indexOf(img);
+            if (elem == "sep") {
+                img.data = undefined;
+                disappear(index,(new Date()).getTime(),undefined, undefined);
+                return;
+            }
+            var newSrc = "res/"+ part +"/"+ elem +"-min.png";
+            var newSrc2;
+            if (index == 9) {
+                newSrc2 = "res/"+ part +"/"+ hair2[hair.indexOf(elem)] +"-min.png";
+            } else {
+                
+            }
+            img.data = elem;
+            if (dwidth[index] > 0) {
+                img.src = newSrc;
+                if (newSrc2)
+                    dparts[3].src = newSrc2;
+            }
+            disappear(index,(new Date()).getTime(),newSrc, newSrc2);
+        }
+    });
+}
 
 function fillSel() {
     $('#selec').empty();
@@ -107,9 +140,6 @@ function fillSel() {
             img.src = newSrc;
             if (newSrc2)
                 dparts[3].src = newSrc2;
-            img.onload = function() {
-                appear(obj,(new Date()).getTime());
-            }   
         }
         disappear(index,(new Date()).getTime(),newSrc, newSrc2);
     });
@@ -194,8 +224,9 @@ $( document ).ready(function() {
             $('#selec').css('padding-top','0px');
           }, 200);
     });
+    init()
     setTimeout(function(){
-        init()
-    }, 500);
+        draw()
+    }, 750);
 
 });
