@@ -215,6 +215,9 @@ $( document ).ready(function() {
     $("#reset").click(function(event){
         init()
     });
+    $("#random").click(function(event){
+        random()
+    });
     $(".part").click(function(event){
         $('#pselected').removeAttr('id');
         $(event.target).attr('id','pselected');

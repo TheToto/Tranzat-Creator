@@ -119,6 +119,10 @@ body {
   top: 5vh;
   left: 5vw;
 }
+.random {
+  top: 15vh;
+  left: 5vw;
+}
 .download {
   top: 5vh;
   right: 5vw;
